@@ -1,3 +1,60 @@
-<p>
-  add-product works!
-</p>
+<div id="wrapper">
+  <app-header></app-header>
+  <div id="content-wrapper" style="padding-left: 20px;" class="d-flex flex-column">
+
+    <!-- Main Content -->
+    <!-- <div id="content"> -->
+    <h1>Add Product</h1>
+
+    <form class="example-form" (ngSubmit)="onAdd(productForm)" #productForm="ngForm">
+      <mat-form-field class="example-full-width">
+        <input matInput ngModel required placeholder="Product Name" name="pro_name" #pro_name="ngModel">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input type="number" matInput ngModel required placeholder="Product Price" name="pro_price" #pro_price="ngModel">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input matInput ngModel required placeholder="Product Color" name="pro_color" #pro_color="ngModel">
+      </mat-form-field>
+
+      <!--       <mat-form-field class="example-full-width">
+        <input matInput ngModel required placeholder="Product Warranty" name="pro_warranty" #pro_warranty="ngModel">
+      </mat-form-field>
+ -->
+      <mat-form-field class="example-full-width">
+        <!-- <span matPrefix>+1 &nbsp;</span> -->
+        <input matInput ngModel required placeholder="Product Warranty" name="pro_warranty" #pro_warranty="ngModel"
+          type="number" matInput placeholder="Product Warranty">
+        <!-- <mat-icon matSuffix>mode_edit</mat-icon> -->
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <textarea matInput ngModel required placeholder="Product Specifications" name="pro_spec" #pro_spec="ngModel"
+          cols="30" rows="3"></textarea>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <textarea matInput ngModel required placeholder="Event Location" name="event_loc" #event_loc="ngModel" cols="30"
+          rows="3"></textarea>
+        <mat-error *ngIf="event_loc.hasError('required')">Please Enter Event Location</mat-error>
+      </mat-form-field>
+
+      <!-- <mat-form-field>
+          <mat-select required placeholder="Select Category" name="category_id" [(ngModel)]="category_id" #c_id="ngModel">
+            <mat-option *ngFor="let item of arrCommu" [value]="item.comm_id">
+              {{ item.comm_name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field> -->
+
+      <button type="submit" mat-button mat-raised-button color="warn" [disabled]="!productForm.form.valid">Add Product
+        <mat-icon>done</mat-icon>
+      </button>
+
+    </form>
+
+  </div>
+</div>
+<!-- </div> -->

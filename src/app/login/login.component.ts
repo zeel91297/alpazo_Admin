@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, FormArray, Validators } from '@angular/forms';
 import { UsersDBService } from '../providers/user/users-db.service';
 import { Router } from '@angular/router';
-import { LoginR } from '../models/user_class';
+import { LoginR } from '../models/retailer_class';
 
 @Component({
   selector: 'app-login',

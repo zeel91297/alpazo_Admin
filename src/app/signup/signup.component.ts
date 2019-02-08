@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, FormArray, Validators } from '@angular/forms';
 import { UsersDBService } from '../providers/user/users-db.service';
-import { SignUP_RS, SignUP } from '../models/user_class';
+import { SignUP_RS, SignUP } from '../models/retailer_class';
 
 import { AppRoutingModule } from '../app-routing.module';
 import { Route, Router } from '@angular/router';

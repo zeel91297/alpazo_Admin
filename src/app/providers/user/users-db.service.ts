@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { SignUP, SignUP_RS, LoginR } from 'src/app/models/user_class';
+import { SignUP, SignUP_RS, LoginR } from 'src/app/models/retailer_class';
 
 
 @Injectable({

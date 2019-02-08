@@ -4,6 +4,23 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HttpClientModule, HttpHeaders } from '@angular/common/http';
 
+import {
+  MatButtonModule,
+  MatSortModule,
+  MatTableModule,
+  MatPaginatorModule,
+  MatSelectModule,
+  MatCheckboxModule,
+  MatInputModule,
+  MatFormFieldModule,
+  MatIconModule,
+  MatExpansionModule,
+  MatListModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatRadioModule
+} from '@angular/material';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -21,6 +38,7 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { UpdateInventoryComponent } from './update-inventory/update-inventory.component';
 import { AddServiceComponent } from './add-service/add-service.component';
 import { UpdateServiceComponent } from './update-service/update-service.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -46,7 +64,22 @@ import { UpdateServiceComponent } from './update-service/update-service.componen
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatSortModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSelectModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatCheckboxModule,
+    MatIconModule,
+    MatExpansionModule,
+    MatListModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRadioModule
   ],
   providers: [ ],
   bootstrap: [AppComponent]
