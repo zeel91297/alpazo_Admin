@@ -34,19 +34,20 @@
           cols="30" rows="3"></textarea>
       </mat-form-field>
 
-      <mat-form-field class="example-full-width">
+      <!-- <mat-form-field class="example-full-width">
         <textarea matInput ngModel required placeholder="Event Location" name="event_loc" #event_loc="ngModel" cols="30"
           rows="3"></textarea>
         <mat-error *ngIf="event_loc.hasError('required')">Please Enter Event Location</mat-error>
-      </mat-form-field>
+      </mat-form-field> -->
 
-      <!-- <mat-form-field>
+      <mat-form-field>
           <mat-select required placeholder="Select Category" name="category_id" [(ngModel)]="category_id" #c_id="ngModel">
             <mat-option *ngFor="let item of category" [value]="item.category_id">
               {{ item.category_name }}
             </mat-option>
           </mat-select>
-        </mat-form-field> -->
+        </mat-form-field>
+        <hr>
 
       <button type="submit" mat-button mat-raised-button color="warn" [disabled]="!productForm.form.valid">Add Product
         <mat-icon>done</mat-icon>

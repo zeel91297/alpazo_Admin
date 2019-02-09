@@ -25,6 +25,7 @@ export class AddProductComponent implements OnInit {
       (data: any) => {
         console.log(data.Data);
         this.category = data.Data;
+        alert('Product Added Successfully');
       },
       function(e) {
         alert(e);

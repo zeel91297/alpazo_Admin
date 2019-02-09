@@ -46,7 +46,11 @@ import { CategoryDBService } from './providers/categoryDB/category-db.service';
 import { ProductsDBService } from './providers/products/products-db.service';
 import { UsersDBService } from './providers/user/users-db.service';
 import { ServicesDBService } from './providers/servicesDB/services-db.service';
+<<<<<<< HEAD
 >>>>>>> b7865840f83fa1576f49b72acb9e0fd250ea2f3e
+=======
+import { ToBeAcceptedComponent } from './to-be-accepted/to-be-accepted.component';
+>>>>>>> 12668c7e2737f94201f6add92af4088007553f2d
 
 @NgModule({
   declarations: [
@@ -65,7 +69,8 @@ import { ServicesDBService } from './providers/servicesDB/services-db.service';
     AddProductComponent,
     UpdateInventoryComponent,
     AddServiceComponent,
-    UpdateServiceComponent
+    UpdateServiceComponent,
+    ToBeAcceptedComponent
   ],
   imports: [
     BrowserModule,

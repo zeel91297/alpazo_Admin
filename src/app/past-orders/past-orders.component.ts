@@ -35,6 +35,12 @@ export class PastOrdersComponent implements OnInit {
         this.dataSource = new MatTableDataSource(this.arrPast);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
+      },
+      function(e) {
+        alert(e);
+      },
+      function() {
+
       }
     );
   }
