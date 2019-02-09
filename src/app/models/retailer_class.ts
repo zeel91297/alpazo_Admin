@@ -32,5 +32,5 @@ export class SignUP_RS {
 }
 
 export class LoginR {
-  constructor(public retailer_email: string, retailer_password: string) {}
+  constructor(public retailer_email: string,public retailer_password: string) {}
 }
