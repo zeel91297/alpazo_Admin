@@ -43,6 +43,7 @@ import { CategoryDBService } from './providers/categoryDB/category-db.service';
 import { ProductsDBService } from './providers/products/products-db.service';
 import { UsersDBService } from './providers/user/users-db.service';
 import { ServicesDBService } from './providers/servicesDB/services-db.service';
+import { ToBeAcceptedComponent } from './to-be-accepted/to-be-accepted.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { ServicesDBService } from './providers/servicesDB/services-db.service';
     AddProductComponent,
     UpdateInventoryComponent,
     AddServiceComponent,
-    UpdateServiceComponent
+    UpdateServiceComponent,
+    ToBeAcceptedComponent
   ],
   imports: [
     BrowserModule,

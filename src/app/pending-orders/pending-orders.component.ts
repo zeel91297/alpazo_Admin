@@ -1,27 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 
-import {MatTableDataSource, MatTable} from '@angular/material';
 import { DataSource } from '@angular/cdk/collections';
 
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
+import { MatTableDataSource, MatSort, MatPaginator, Sort } from '@angular/material';
+import { SelectionModel } from '@angular/cdk/collections';
+import { PendingOrder } from '../models/pending_order_class';
+import { ProductsDBService } from '../providers/products/products-db.service';
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
-];
+
 
 @Component({
   selector: 'app-pending-orders',
@@ -30,16 +16,42 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class PendingOrdersComponent implements OnInit {
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
 
-  applyFilter(filterValue: string) {
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-  }
+  arrPending: PendingOrder[] = [];
+  delPending: PendingOrder[] = [];
 
-  constructor() { }
+  // tslint:disable-next-line:max-line-length
+  displayedColumns = [ 'product_name', 'product_price', 'stock', 'delivery', 'user_name', 'user_phone', 'user_pincode', 'date'];
+
+  dataSource: MatTableDataSource<PendingOrder>;
+  selection = new SelectionModel<PendingOrder>(true, []);
+
+  constructor(private _dataProduct: ProductsDBService) { }
 
   ngOnInit() {
+    this._dataProduct.getPendingOrders(3).subscribe(
+      (data: any) => {
+        this.arrPending = data;
+        console.log(data);
+        this.dataSource = new MatTableDataSource(this.arrPending);
+        this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort;
+      },
+      function(e) {
+        alert(e);
+      },
+      function() {
+
+      }
+    );
+  }
+
+  applyFilter(filtervalue: string) {
+    filtervalue = filtervalue.trim();
+    filtervalue = filtervalue.toLocaleLowerCase();
+    this.dataSource.filter = filtervalue;
   }
 
 }

@@ -16,6 +16,7 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { UpdateInventoryComponent } from './update-inventory/update-inventory.component';
 import { AddServiceComponent } from './add-service/add-service.component';
 import { UpdateServiceComponent } from './update-service/update-service.component';
+import { ToBeAcceptedComponent } from './to-be-accepted/to-be-accepted.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
@@ -34,6 +35,7 @@ const routes: Routes = [
   {path: 'edit-inventory/:id', component: UpdateInventoryComponent},
   {path: 'add-service', component: AddServiceComponent},
   {path: 'update-service/:id', component: UpdateServiceComponent},
+  {path: 'tobeAccepted', component: ToBeAcceptedComponent}
 ];
 
 @NgModule({
