@@ -20,7 +20,7 @@ export class PastOrdersComponent implements OnInit {
   arrPast: PastOrderClass[] = [];
   delPast: PastOrderClass[] = [];
 
-  displayedColumns = ['retailer_name', 'retailer_mobile', 'retailer_pincode', 'date'];
+  displayedColumns = ['retailer_name', 'retailer_mobile', 'retailer_pincode', 'user_city', 'date'];
 
   dataSource: MatTableDataSource<PastOrderClass>;
   selection = new SelectionModel<PastOrderClass>(true, []);

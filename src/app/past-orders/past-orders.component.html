@@ -1,7 +1,7 @@
 <div id="wrapper">
   <app-header></app-header>
   <div id="content-wrapper" style="padding-left: 20px;" class="d-flex flex-column">
-
+    <h1 style="margin-left: 20%;">Past Orders</h1>
     <div class="example-container mat-elevation-z8">
       <div class="example-header">
         <mat-form-field>
@@ -11,18 +11,23 @@
       <mat-table #table [dataSource]="dataSource" matSort>
 
         <ng-container matColumnDef="retailer_name">
-          <mat-header-cell *matHeaderCellDef mat-sort-header>Retailer Name </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.retailer_name}} </mat-cell>
+          <mat-header-cell *matHeaderCellDef mat-sort-header>Product Name </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.product_name}} </mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="retailer_mobile">
-          <mat-header-cell *matHeaderCellDef mat-sort-header> Retailer Mobile No </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.retailer_mobile}} </mat-cell>
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Product Price </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.product_price}} </mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="retailer_pincode">
-          <mat-header-cell *matHeaderCellDef mat-sort-header> Retailer Pincode </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.retailer_pincode}} </mat-cell>
+          <mat-header-cell *matHeaderCellDef mat-sort-header> User Name </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.user_name}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="user_city">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> User PinCode </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.user_pincode}} </mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="date">

@@ -19,7 +19,7 @@ import { UpdateServiceComponent } from './update-service/update-service.componen
 import { ToBeAcceptedComponent } from './to-be-accepted/to-be-accepted.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
+  {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: 'signup', component: SignupComponent},
   {path: 'login', component: LoginComponent},
   {path: 'home', component: HomepageComponent},
@@ -28,13 +28,10 @@ const routes: Routes = [
   {path: 'header', component: HeaderComponent},
   {path: 'advertisements', component: AdvertisementsComponent},
   {path: 'add-advertisement', component: AddAdvertisementComponent},
-  {path: 'edit-advertisement/:id', component: EditAdvertisementComponent},
   {path: 'pending-orders', component: PendingOrdersComponent},
   {path: 'past-orders', component: PastOrdersComponent},
   {path: 'add-product', component: AddProductComponent},
-  {path: 'edit-inventory/:id', component: UpdateInventoryComponent},
   {path: 'add-service', component: AddServiceComponent},
-  {path: 'update-service/:id', component: UpdateServiceComponent},
   {path: 'tobeAccepted', component: ToBeAcceptedComponent}
 ];
 

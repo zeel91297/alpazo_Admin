@@ -41,6 +41,10 @@ export class PastOrderClass {
     public date: string,
     public customer_otp: number,
     public verified: number,
-    public verified_by_retailer: number
+    public verified_by_retailer: number,
+    public user_name: string,
+    public user_pincode: number,
+    public product_name: string,
+    public product_price: number
   ) {}
 }

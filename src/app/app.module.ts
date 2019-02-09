@@ -38,19 +38,17 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { UpdateInventoryComponent } from './update-inventory/update-inventory.component';
 import { AddServiceComponent } from './add-service/add-service.component';
 import { UpdateServiceComponent } from './update-service/update-service.component';
+import { ToBeAcceptedComponent } from './to-be-accepted/to-be-accepted.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-<<<<<<< HEAD
+
 import { AddbService } from './providers/advertisedb/addb_service';
-=======
 import { CategoryDBService } from './providers/categoryDB/category-db.service';
 import { ProductsDBService } from './providers/products/products-db.service';
 import { UsersDBService } from './providers/user/users-db.service';
 import { ServicesDBService } from './providers/servicesDB/services-db.service';
-<<<<<<< HEAD
->>>>>>> b7865840f83fa1576f49b72acb9e0fd250ea2f3e
-=======
-import { ToBeAcceptedComponent } from './to-be-accepted/to-be-accepted.component';
->>>>>>> 12668c7e2737f94201f6add92af4088007553f2d
+
+
 
 @NgModule({
   declarations: [
@@ -94,11 +92,8 @@ import { ToBeAcceptedComponent } from './to-be-accepted/to-be-accepted.component
     MatNativeDateModule,
     MatRadioModule
   ],
-<<<<<<< HEAD
-  providers: [ AddbService],
-=======
-  providers: [ CategoryDBService, UsersDBService, ProductsDBService, ServicesDBService],
->>>>>>> b7865840f83fa1576f49b72acb9e0fd250ea2f3e
+
+  providers: [AddbService, CategoryDBService, UsersDBService, ProductsDBService, ServicesDBService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

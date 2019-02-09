@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   email: string;
   password: string;
-  mylog:LoginR[]=[];
+  mylog: LoginR[] = [];
   constructor(private _data: UsersDBService, private route: Router) { }
 
   ngOnInit() {
