@@ -8,7 +8,7 @@ import { Products } from 'src/app/models/product_class';
 })
 export class ProductsDBService {
 
-  public pastOrder: '';
+  public pastOrder = 'http://localhost:8110/pastretailor/';
   public pendingOrder: '';
   public addProductUrl: '';
   public updateInventory: '';

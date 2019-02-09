@@ -39,7 +39,14 @@ import { UpdateInventoryComponent } from './update-inventory/update-inventory.co
 import { AddServiceComponent } from './add-service/add-service.component';
 import { UpdateServiceComponent } from './update-service/update-service.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+<<<<<<< HEAD
 import { AddbService } from './providers/advertisedb/addb_service';
+=======
+import { CategoryDBService } from './providers/categoryDB/category-db.service';
+import { ProductsDBService } from './providers/products/products-db.service';
+import { UsersDBService } from './providers/user/users-db.service';
+import { ServicesDBService } from './providers/servicesDB/services-db.service';
+>>>>>>> b7865840f83fa1576f49b72acb9e0fd250ea2f3e
 
 @NgModule({
   declarations: [
@@ -82,7 +89,11 @@ import { AddbService } from './providers/advertisedb/addb_service';
     MatNativeDateModule,
     MatRadioModule
   ],
+<<<<<<< HEAD
   providers: [ AddbService],
+=======
+  providers: [ CategoryDBService, UsersDBService, ProductsDBService, ServicesDBService],
+>>>>>>> b7865840f83fa1576f49b72acb9e0fd250ea2f3e
   bootstrap: [AppComponent]
 })
 export class AppModule { }

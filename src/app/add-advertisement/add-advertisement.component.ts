@@ -19,7 +19,7 @@ export class AddAdvertisementComponent implements OnInit {
 
   ngOnInit() {
   }
-  onAdd(productForm) {
+  onAdd(productForm) {  
     console.log(productForm.value.ad_title);
      this._data.addAdvertise(new Advertises(1,this.ad_title,this.ad_img,this.ad_des,this.ad_date)).subscribe(
       (data: any) => {

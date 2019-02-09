@@ -8,7 +8,7 @@ import { SignUP, SignUP_RS, LoginR } from 'src/app/models/retailer_class';
 })
 export class UsersDBService {
 
-  public signup_url = '';
+  public signup_url = 'http://localhost:8110/loginAdmin';
   constructor(private _http: HttpClient) { }
 
 

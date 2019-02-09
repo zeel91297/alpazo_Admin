@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   email: string;
   password: string;
+  mylog:LoginR[]=[];
   constructor(private _data: UsersDBService, private route: Router) { }
 
   ngOnInit() {
@@ -24,7 +25,21 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin() {
-    // this._data.loginRetailer(new LoginR(this.email, this.password)).subscribe();
+    this._data.loginRetailer(new LoginR(this.email, this.password)).subscribe((data:any)=>{
+      this.mylog=data;
+      if(this.mylog.length==1){
+        localStorage.setItem('email',this.email);
+      }
+      else{
+        alert("Please Enter Valid Data");
+      }
+    },
+    (err)=>{
+
+    },
+    ()=>{
+
+    });
     this.route.navigate(['dashboard']);
   }
 
