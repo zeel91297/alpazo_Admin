@@ -18,11 +18,11 @@
       <mat-form-field class="example-full-width">
         <input matInput ngModel required placeholder="Product Color" name="pro_color" #pro_color="ngModel">
       </mat-form-field>
-
-      <!--       <mat-form-field class="example-full-width">
+<!--
+      <mat-form-field class="example-full-width">
         <input matInput ngModel required placeholder="Product Warranty" name="pro_warranty" #pro_warranty="ngModel">
-      </mat-form-field>
- -->
+      </mat-form-field> -->
+
       <mat-form-field class="example-full-width">
         <!-- <span matPrefix>+1 &nbsp;</span> -->
         <input matInput ngModel required placeholder="Product Warranty" name="pro_warranty" #pro_warranty="ngModel"
@@ -43,8 +43,8 @@
 
       <!-- <mat-form-field>
           <mat-select required placeholder="Select Category" name="category_id" [(ngModel)]="category_id" #c_id="ngModel">
-            <mat-option *ngFor="let item of arrCommu" [value]="item.comm_id">
-              {{ item.comm_name }}
+            <mat-option *ngFor="let item of category" [value]="item.category_id">
+              {{ item.category_name }}
             </mat-option>
           </mat-select>
         </mat-form-field> -->

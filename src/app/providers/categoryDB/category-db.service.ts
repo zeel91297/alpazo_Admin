@@ -4,13 +4,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class ServicesDBService {
+export class CategoryDBService {
 
-  public services_url = 'http://localhost:8110/services';
-
+  cat_url = 'http://localhost:8110/category';
   constructor(private _http: HttpClient) { }
 
-  getAllServices() {
-    return this._http.get(this.services_url);
+  getAllCategories() {
+    return this._http.get(this.cat_url);
   }
 }

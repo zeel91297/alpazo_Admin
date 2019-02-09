@@ -15,50 +15,52 @@
               <form class="user" [formGroup]="commonForm" (ngSubmit)="SubmitForm()">
                 <!-- <form class="user"> -->
                 <div class="form-group">
-                  <input type="text" formControlName="name" [(ngModel)]="name" class="form-control form-control-user" id="exampleInputName"
-                    placeholder="Enter Name">
+                  <input type="text" formControlName="name" [(ngModel)]="name" class="form-control form-control-user"
+                    id="exampleInputName" placeholder="Enter Name">
                 </div>
                 <div class="form-group row">
                   <div class="form-group">
-                    <input type="email" formControlName="email" [(ngModel)]="email" class="form-control form-control-user" id="exampleInputEmail"
-                      placeholder="Email Address">
+                    <input type="email" formControlName="email" [(ngModel)]="email" class="form-control form-control-user"
+                      id="exampleInputEmail" placeholder="Email Address">
                   </div>
                   <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="password" formControlName="password" [(ngModel)]="password" class="form-control form-control-user" id="exampleInputPassword"
-                      placeholder="Password">
+                    <input type="password" formControlName="password" [(ngModel)]="password" class="form-control form-control-user"
+                      id="exampleInputPassword" placeholder="Password">
                   </div>
                 </div>
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="text" formControlName="city" [(ngModel)]="city" class="form-control form-control-user" id="exampleInputCity"
-                      placeholder="Enter City">
+                    <input type="text" formControlName="city" [(ngModel)]="city" class="form-control form-control-user"
+                      id="exampleInputCity" placeholder="Enter City">
                   </div>
                   <div class="col-sm-6">
-                    <input type="number" formControlName="pincode" [(ngModel)]="pincode" class="form-control form-control-user" id="exampleRepeatPassword"
-                      placeholder="Enter Pincode">
+                    <input type="number" formControlName="pincode" [(ngModel)]="pincode" class="form-control form-control-user"
+                      id="exampleRepeatPassword" placeholder="Enter Pincode">
                   </div>
                 </div>
                 <div class="form-group">
-                  <input type="number" formControlName="contacts" [(ngModel)]="contacts" class="form-control form-control-user" id="exampleInputMobile"
-                    placeholder="Contact No">
+                  <input type="number" formControlName="contacts" [(ngModel)]="contacts" class="form-control form-control-user"
+                    id="exampleInputMobile" placeholder="Contact No">
                 </div>
                 <div class="form-group">
                   <span class="navbar-brand">Person:</span>
-                  <input type="radio" (click)="unsetFlag()" [(ngModel)]="person" formControlName="person" value="retailer"> Retailer &nbsp;&nbsp;
-                  <input type="radio" (click)="setFlag()" [(ngModel)]="person" formControlName="person" value="service_man"> Service Man
+                  <input type="radio" (click)="unsetFlag()" [(ngModel)]="person" formControlName="person" value="retailer">
+                  Retailer &nbsp;&nbsp;
+                  <input type="radio" (click)="setFlag()" [(ngModel)]="person" formControlName="person" value="service_man">
+                  Service Man
                 </div>
                 <div [hidden]="!flag">
                   <div class="form-group">
                     <span class="navbar-brand">Services</span>
                     <select formControlName="services" [(ngModel)]="service" class="form-control ">
-                      <option value="Plumber">Plumber</option>
-                      <option value="Electrician">Electrician</option>
-                      <option value="Spa">Spa</option>
+                      <option [value]="item.service_id" *ngFor="let item of arrService">{{item.service_name}}</option>
+                      <!-- <option value="Electrician">Electrician</option>
+                      <option value="Spa">Spa</option> -->
                     </select>
                   </div>
                   <div class="form-group">
-                    <input type="number" formControlName="fees" [(ngModel)]="fees" class="form-control form-control-user" id="exampleInputFees"
-                      placeholder="Visiting Fees">
+                    <input type="number" formControlName="fees" [(ngModel)]="fees" class="form-control form-control-user"
+                      id="exampleInputFees" placeholder="Visiting Fees">
                   </div>
                 </div>
                 <!-- <a  class="btn btn-primary btn-user btn-block">

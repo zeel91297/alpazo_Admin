@@ -39,6 +39,10 @@ import { UpdateInventoryComponent } from './update-inventory/update-inventory.co
 import { AddServiceComponent } from './add-service/add-service.component';
 import { UpdateServiceComponent } from './update-service/update-service.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CategoryDBService } from './providers/categoryDB/category-db.service';
+import { ProductsDBService } from './providers/products/products-db.service';
+import { UsersDBService } from './providers/user/users-db.service';
+import { ServicesDBService } from './providers/servicesDB/services-db.service';
 
 @NgModule({
   declarations: [
@@ -81,7 +85,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatNativeDateModule,
     MatRadioModule
   ],
-  providers: [ ],
+  providers: [ CategoryDBService, UsersDBService, ProductsDBService, ServicesDBService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
