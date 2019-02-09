@@ -39,6 +39,7 @@ import { UpdateInventoryComponent } from './update-inventory/update-inventory.co
 import { AddServiceComponent } from './add-service/add-service.component';
 import { UpdateServiceComponent } from './update-service/update-service.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AddbService } from './providers/advertisedb/addb_service';
 
 @NgModule({
   declarations: [
@@ -81,7 +82,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatNativeDateModule,
     MatRadioModule
   ],
-  providers: [ ],
+  providers: [ AddbService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

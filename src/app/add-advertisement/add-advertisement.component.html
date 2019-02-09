@@ -1,3 +1,43 @@
-<p>
-  add-advertisement works!
-</p>
+<div id="wrapper">
+    <app-header></app-header>
+    <div id="content-wrapper" style="padding-left: 20px;" class="d-flex flex-column">
+  
+      <!-- Main Content -->
+      <!-- <div id="content"> -->
+      <h1>Add Advertisement</h1><br><br>
+      <form class="example-form" (ngSubmit)="onAdd(productForm)" #productForm="ngForm">
+        <mat-form-field class="example-full-width">
+          <input matInput ngModel required placeholder="Enter Email" name="ad_email" #ad_email="ngModel">
+        </mat-form-field><br><br>
+       
+  
+        <mat-form-field class="example-full-width">
+          
+          <input matInput ngModel required placeholder="Advertisement Title" name="ad_title" #ad_title="ngModel">
+        </mat-form-field><br><br>
+  
+        <mat-form-field class="example-full-width">
+          <input matInput ngModel required placeholder="Advertisement Description" name="ad_des" #ad_des="ngModel">
+        </mat-form-field><br><br>
+  
+        <mat-form-field class="example-full-width">
+            <input matInput ngModel required placeholder="Advertisement Image" name="ad_img" #ad_img="ngModel">
+          </mat-form-field><br><br>
+
+          <mat-form-field class="example-full-width">
+              
+              <input matInput ngModel required type="date"  placeholder="Advertisement Date" name="ad_date" #ad_date="ngModel">
+            </mat-form-field><br>
+  <br>
+  
+    
+        <button type="submit" mat-button mat-raised-button color="warn" [disabled]="!productForm.form.valid">Add Product
+          <mat-icon>done</mat-icon>
+        </button>
+  
+      </form>
+  
+    </div>
+  </div>
+  <!-- </div> -->
+  
